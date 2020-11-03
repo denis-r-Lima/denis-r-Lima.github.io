@@ -145,7 +145,7 @@ h5 {
 
 #Content h5 {
   font-family: "EB Garamond", serif;
-  font-size: clamp(10px, 1.8vw, 25px);
+  font-size: clamp(10px, 1.8vw, 18px);
   color: #25291c;
 }
 
