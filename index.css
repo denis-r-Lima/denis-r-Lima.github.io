@@ -149,6 +149,10 @@ h5 {
   color: #25291c;
 }
 
+#about__text {
+  padding-left: 20px;
+}
+
 @media screen and (max-width: 600px) {
   .Menu {
     flex-direction: column;
