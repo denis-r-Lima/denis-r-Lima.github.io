@@ -52,7 +52,7 @@ function Contact(){
                 <br>
                 <h5>
                     Do you want to talk? Any doubt about my job? Want me as part of your team? <br>
-                    Contact me @: <b><a href="mailto:denis.r.lima88@gmail.com">denis.r.lima88@gmail.com</a></b>
+                    Contact me @ <b><a href="mailto:denis.r.lima88@gmail.com">denis.r.lima88@gmail.com</a></b>
                 </h5>
             </center>
         </div>
