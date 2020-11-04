@@ -60,7 +60,7 @@ h5 {
 
 .button {
   padding: 10px;
-  font-size: 14px;
+  font-size: clamp(10px, 1.6vw, 14px);
   font-weight: bold;
   text-align: center;
   cursor: pointer;
