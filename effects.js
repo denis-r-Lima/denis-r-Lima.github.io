@@ -17,7 +17,7 @@ const txt2 = "and I'm a Full Stack JS Developer (At least I think I am =D)"
 let typeSpeed
 
 function typeWriter() {
-  typeSpeed = Math.random() * (100 - 50) + 50
+  typeSpeed = Math.random() * (120 - 50) + 50
   if (i < txt1.length) {
     document.getElementById("h1__me").innerHTML += txt1.charAt(i)
     i++
