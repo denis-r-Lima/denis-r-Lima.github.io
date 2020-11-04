@@ -1,51 +1,49 @@
-const divId = 'Container'
+const divId = "Container"
 
-
-function Renderer(id, inner){
-    document.getElementById(id).innerHTML = inner
+function Renderer(id, inner) {
+  document.getElementById(id).innerHTML = inner
 }
-function StateHandler(init){
-
-    function State(init){
+function StateHandler(init) {
+  function State(init) {
     this.state = init
     this.showState = () => this.state
     this.setState = (value) => {
-        if(this.state !== value){
-            this.state = value
-            Renderer(divId, Main())
-            return
-        }else{
-            return
-        }
+      if (this.state !== value) {
+        this.state = value
+        Renderer(divId, Main())
+        return
+      } else {
+        return
+      }
     }
-    
+
     return [this.showState, this.setState]
+  }
+
+  return new State(init)
 }
 
-return new State(init)
+const [currentPage, setCurrentPage] = StateHandler("")
 
+const activePage = {
+  Portfolio,
+  Contact,
+  About,
 }
 
-const [currentPage, setCurrentPage] = StateHandler('')
-
-const activePage ={
-    Portfolio,
-    Contact,
-    About
-}
-
-
-function Portfolio(){
-    return(
-        `<center><h1>Retro mobile game SNAKE!</h1>
-        </center>`
-    )
-}
-
-function Contact(){
-    return(
-        `
+function Portfolio() {
+  return ` 
         <div id="Content">
+            <img src="./img//javascript-4.svg" alt="">
+            <img src="./img//node-js-logo.svg" alt="">
+            <img src="./img//react.svg" alt="">
+        </div>
+        `
+}
+
+function Contact() {
+  return `
+       
             <center>
                 <h1>
                     Contact me!
@@ -58,49 +56,56 @@ function Contact(){
             </center>
         </div>
         `
-    )
 }
 
-function About(){
-    return(
-        `
+function About() {
+  return `
         <div id="Content">
-        <h1>
-            About Me!
-        </h1>
-        <h5 id="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at semper augue, at suscipit libero. Aenean eu pellentesque metus. Duis congue blandit est, ac sollicitudin dui scelerisque id. Proin vel suscipit purus. Pellentesque finibus malesuada lacus nec ornare. Suspendisse potenti. Etiam lobortis velit et ornare placerat. Donec suscipit, est sit amet accumsan malesuada, nisi odio mollis leo, sed porta massa sem et mauris.
+        <div class="fixed__title">
+            <h1>
+                About Me!
+            </h1>
+        </div>
+            <h5 id="about__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at semper augue, at suscipit libero. Aenean eu pellentesque metus. Duis congue blandit est, ac sollicitudin dui scelerisque id. Proin vel suscipit purus. Pellentesque finibus malesuada lacus nec ornare. Suspendisse potenti. Etiam lobortis velit et ornare placerat. Donec suscipit, est sit amet accumsan malesuada, nisi odio mollis leo, sed porta massa sem et mauris.
 
-            Vivamus nec dapibus felis, vel pretium magna. Vestibulum faucibus elementum urna, quis dapibus nibh sagittis a. Suspendisse at ultrices velit. Aenean non congue ligula. Praesent varius, lectus sed sagittis tincidunt, urna eros mattis enim, sit amet efficitur eros dolor ut risus. Integer auctor leo ut elit euismod, quis dignissim erat venenatis. Donec quis rutrum elit. Donec placerat dignissim ipsum egestas auctor. In hac habitasse platea dictumst. Aliquam vel faucibus mauris, in commodo odio. Donec vitae tempor odio, eget maximus nulla. Phasellus quis fringilla est.
-            
-            Donec blandit, leo id ornare vehicula, tortor mi gravida est, in porta ipsum ligula a orci. Quisque sed odio nisl. Praesent volutpat, ante eu vehicula cursus, risus nunc pellentesque ante, ac dictum nibh massa in elit. Suspendisse id viverra ligula. Morbi a scelerisque lorem. Maecenas non felis ac justo tempor suscipit. Fusce eget tortor ligula. Fusce eleifend nibh in felis congue scelerisque. Vestibulum sem massa, viverra vel eros mattis, tempor mattis dolor. Maecenas convallis metus turpis, nec eleifend nisi imperdiet sed. Aenean ac augue turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ligula nibh, auctor eget massa non, pulvinar iaculis turpis. Integer interdum mattis neque ac efficitur. Sed elementum nisi nec ante cursus, id accumsan turpis porttitor.
-            
-            Nunc ullamcorper massa vel ligula elementum scelerisque. Aenean mattis finibus sollicitudin. Donec vel elit volutpat, porta nulla a, rutrum ex. Maecenas sit amet hendrerit lacus. Phasellus semper nibh sapien, quis mattis quam posuere sit amet. Donec pellentesque leo a sem molestie rhoncus. Nam vulputate porta arcu non sodales. Duis porta tortor lectus, vel consectetur ex malesuada ut. Proin nisi ligula, pellentesque ut luctus et, ultrices non eros. Vestibulum ac augue et augue pulvinar elementum. Integer sapien massa, facilisis vel blandit sed, placerat vel lectus. Ut molestie vulputate magna eu maximus.
-            
-            Phasellus aliquet nisi et eleifend dignissim. Curabitur efficitur faucibus lacus at pellentesque. In pharetra tempus leo, rutrum feugiat felis ullamcorper ac. Aenean dignissim bibendum laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed mattis purus sed luctus placerat. Aenean vitae convallis dolor. Duis volutpat purus placerat, vestibulum elit sed, tincidunt augue. Curabitur maximus odio in quam pellentesque mattis. Nullam nec arcu enim.</h5>
+                Vivamus nec dapibus felis, vel pretium magna. Vestibulum faucibus elementum urna, quis dapibus nibh sagittis a. Suspendisse at ultrices velit. Aenean non congue ligula. Praesent varius, lectus sed sagittis tincidunt, urna eros mattis enim, sit amet efficitur eros dolor ut risus. Integer auctor leo ut elit euismod, quis dignissim erat venenatis. Donec quis rutrum elit. Donec placerat dignissim ipsum egestas auctor. In hac habitasse platea dictumst. Aliquam vel faucibus mauris, in commodo odio. Donec vitae tempor odio, eget maximus nulla. Phasellus quis fringilla est.
+                
+                Donec blandit, leo id ornare vehicula, tortor mi gravida est, in porta ipsum ligula a orci. Quisque sed odio nisl. Praesent volutpat, ante eu vehicula cursus, risus nunc pellentesque ante, ac dictum nibh massa in elit. Suspendisse id viverra ligula. Morbi a scelerisque lorem. Maecenas non felis ac justo tempor suscipit. Fusce eget tortor ligula. Fusce eleifend nibh in felis congue scelerisque. Vestibulum sem massa, viverra vel eros mattis, tempor mattis dolor. Maecenas convallis metus turpis, nec eleifend nisi imperdiet sed. Aenean ac augue turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ligula nibh, auctor eget massa non, pulvinar iaculis turpis. Integer interdum mattis neque ac efficitur. Sed elementum nisi nec ante cursus, id accumsan turpis porttitor.
+                
+                Nunc ullamcorper massa vel ligula elementum scelerisque. Aenean mattis finibus sollicitudin. Donec vel elit volutpat, porta nulla a, rutrum ex. Maecenas sit amet hendrerit lacus. Phasellus semper nibh sapien, quis mattis quam posuere sit amet. Donec pellentesque leo a sem molestie rhoncus. Nam vulputate porta arcu non sodales. Duis porta tortor lectus, vel consectetur ex malesuada ut. Proin nisi ligula, pellentesque ut luctus et, ultrices non eros. Vestibulum ac augue et augue pulvinar elementum. Integer sapien massa, facilisis vel blandit sed, placerat vel lectus. Ut molestie vulputate magna eu maximus.
+                
+                Phasellus aliquet nisi et eleifend dignissim. Curabitur efficitur faucibus lacus at pellentesque. In pharetra tempus leo, rutrum feugiat felis ullamcorper ac. Aenean dignissim bibendum laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed mattis purus sed luctus placerat. Aenean vitae convallis dolor. Duis volutpat purus placerat, vestibulum elit sed, tincidunt augue. Curabitur maximus odio in quam pellentesque mattis. Nullam nec arcu enim.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at semper augue, at suscipit libero. Aenean eu pellentesque metus. Duis congue blandit est, ac sollicitudin dui scelerisque id. Proin vel suscipit purus. Pellentesque finibus malesuada lacus nec ornare. Suspendisse potenti. Etiam lobortis velit et ornare placerat. Donec suscipit, est sit amet accumsan malesuada, nisi odio mollis leo, sed porta massa sem et mauris.
+
+                Vivamus nec dapibus felis, vel pretium magna. Vestibulum faucibus elementum urna, quis dapibus nibh sagittis a. Suspendisse at ultrices velit. Aenean non congue ligula. Praesent varius, lectus sed sagittis tincidunt, urna eros mattis enim, sit amet efficitur eros dolor ut risus. Integer auctor leo ut elit euismod, quis dignissim erat venenatis. Donec quis rutrum elit. Donec placerat dignissim ipsum egestas auctor. In hac habitasse platea dictumst. Aliquam vel faucibus mauris, in commodo odio. Donec vitae tempor odio, eget maximus nulla. Phasellus quis fringilla est.
+                
+                Donec blandit, leo id ornare vehicula, tortor mi gravida est, in porta ipsum ligula a orci. Quisque sed odio nisl. Praesent volutpat, ante eu vehicula cursus, risus nunc pellentesque ante, ac dictum nibh massa in elit. Suspendisse id viverra ligula. Morbi a scelerisque lorem. Maecenas non felis ac justo tempor suscipit. Fusce eget tortor ligula. Fusce eleifend nibh in felis congue scelerisque. Vestibulum sem massa, viverra vel eros mattis, tempor mattis dolor. Maecenas convallis metus turpis, nec eleifend nisi imperdiet sed. Aenean ac augue turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ligula nibh, auctor eget massa non, pulvinar iaculis turpis. Integer interdum mattis neque ac efficitur. Sed elementum nisi nec ante cursus, id accumsan turpis porttitor.
+                
+                Nunc ullamcorper massa vel ligula elementum scelerisque. Aenean mattis finibus sollicitudin. Donec vel elit volutpat, porta nulla a, rutrum ex. Maecenas sit amet hendrerit lacus. Phasellus semper nibh sapien, quis mattis quam posuere sit amet. Donec pellentesque leo a sem molestie rhoncus. Nam vulputate porta arcu non sodales. Duis porta tortor lectus, vel consectetur ex malesuada ut. Proin nisi ligula, pellentesque ut luctus et, ultrices non eros. Vestibulum ac augue et augue pulvinar elementum. Integer sapien massa, facilisis vel blandit sed, placerat vel lectus. Ut molestie vulputate magna eu maximus.
+                
+                Phasellus aliquet nisi et eleife
+            </h5>
         </div>
         `
-    )
 }
 
-function Main(){
-    return(
-        activePage[currentPage()]()
-    )
+function Main() {
+  return activePage[currentPage()]()
 }
 
 const PagesNavigation = {
-    Portfolio
+  Portfolio,
 }
 
-
-function menuClick(e){
-    document.querySelector(".Menu").classList.toggle("nav__active")
+function menuClick(e) {
+  document.querySelector(".Menu").classList.toggle("nav__active")
 }
 
-function menuButton(link, e){
-    setCurrentPage(link)
-    document.getElementById('top').style.height= '40vh'
-    let select = document.querySelector('.Selected')
-    if (select) select.classList.remove('Selected')
-    e.classList.add('Selected')
+function menuButton(link, e) {
+  setCurrentPage(link)
+  document.getElementById("top").style.height = "40vh"
+  let select = document.querySelector(".Selected")
+  if (select) select.classList.remove("Selected")
+  e.classList.add("Selected")
 }
