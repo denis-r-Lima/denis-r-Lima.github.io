@@ -13,7 +13,7 @@ function menuButton(link, e) {
 let i = 0
 let j = 0
 const txt1 = "Hello there! I am Denis Lima,"
-const txt2 = "and I'm a Full Stack JS Developer (At least I think I am =D)"
+const txt2 = "and I'm a Full Stack JS Developer"
 let typeSpeed
 
 function typeWriter() {
