@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+
+#top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 5px);
+  align-self: center;
+  background-image: url("../img/background2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.5s;
+}
+
+#top h1,
+h5 {
+  font-family: "Special Elite", cursive;
+}
+
+#me {
+  background-color: rgba(33, 33, 33, 0.5);
+  padding: 30px;
+  width: 50%;
+  text-align: center;
+  color: #f2f2f2;
+  border: 2px dashed #f2f2f2;
+  border-radius: 10px;
+}
+
+#Header {
+  width: 100vw;
+  height: 5px;
+  background-color: #989c94;
+}

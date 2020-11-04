@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+#Container {
+  width: 80vw;
+  align-self: center;
+}
+
+#Content h1 {
+  font-weight: 500;
+  font-style: italic;
+  font-family: "EB Garamond", serif;
+  font-size: clamp(14px, 3vw, 35px);
+  color: #25291c;
+}
+
+#Content h5 {
+  font-family: "EB Garamond", serif;
+  font-size: clamp(10px, 1.8vw, 18px);
+  color: #25291c;
+}
+
+#about__text {
+  padding-left: 20px;
+}
+
+.portfolio {
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgba(33, 33, 33, 0.5);
+  margin: 30px;
+  padding: 20px;
+  border: 2px outset rgba(33, 33, 33, 0.7);
+  border-radius: 5px;
+  background-color: rgba(152, 156, 148, 0.7);
+}
+
+.portfolio h2 {
+  font-size: clamp(12px, 2vw, 18px);
+}
