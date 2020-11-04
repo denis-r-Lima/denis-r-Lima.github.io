@@ -72,7 +72,11 @@ function Contact() {
                 <h5>
                     Do you want to talk? Any doubt about my projects? Want me as part of your team? <br>
                     You can reach me @ <a href="mailto:denis.r.lima88@gmail.com">denis.r.lima88@gmail.com</a>
+                    <br><br>
+                    You can also find me on:
                 </h5>
+                <a href="https://www.linkedin.com/in/denis-roberto-alves-de-almeida-lima-1a122575/" target="_blank"><img src="./img/LI-In-Bug.png" alt="LinkedIn" title="LinkedIn"></a>
+                <a href="https://github.com/denis-r-Lima" target="_blank"><img src="./img/GitHub-Mark-64px.png" alt="GitHub" title="GitHub"></a>
             </center>
         </div>
         `

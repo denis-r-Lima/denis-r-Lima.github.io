@@ -26,9 +26,9 @@ h5 {
 }
 
 img {
-  height: 30px;
+  height: 20px;
   width: auto;
-  margin: 10px;
+  margin: 5px;
 }
 
 @keyframes expand {
@@ -159,6 +159,19 @@ h5 {
 
 .nav__active .side__Menu {
   width: 100%;
+}
+
+.contact__Menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(200, 200, 200, 0.7);
+  padding: 3px;
+  border-radius: 5px;
 }
 
 #Container {
