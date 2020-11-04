@@ -234,3 +234,16 @@ h5 {
     height: 110px;
   }
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #bdc2bf;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #25291c;
+  border-radius: 20px;
+}
