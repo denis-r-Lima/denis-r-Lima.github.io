@@ -43,7 +43,7 @@ function Portfolio() {
 
 function Contact() {
   return `
-       
+        <div id="Content">
             <center>
                 <h1>
                     Contact me!
@@ -109,3 +109,25 @@ function menuButton(link, e) {
   if (select) select.classList.remove("Selected")
   e.classList.add("Selected")
 }
+
+var i = 0
+var j = 0
+const txt1 = "I am Denis Lima"
+const txt2 = "And I'm a Full Stack JS Developer (At least I think I am =D)"
+const typeSpeed = 60
+
+function typeWriter() {
+  if (i < txt1.length) {
+    document.getElementById("h1__me").innerHTML += txt1.charAt(i)
+    i++
+    setTimeout(typeWriter, typeSpeed)
+  } else {
+    if (j < txt2.length) {
+      document.getElementById("h5__me").innerHTML += txt2.charAt(j)
+      j++
+      setTimeout(typeWriter, typeSpeed)
+    }
+  }
+}
+
+typeWriter()
