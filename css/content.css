@@ -42,6 +42,10 @@
   font-size: clamp(12px, 2vw, 18px);
 }
 
+#email__link {
+  font-family: monospace;
+}
+
 #email__link:hover {
   color: #56583d;
 }

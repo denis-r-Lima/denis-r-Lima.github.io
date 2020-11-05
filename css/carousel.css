@@ -23,6 +23,11 @@
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
+.first {
+  width: 70vw;
+  transition: width 0.3s ease;
+}
+
 .project img {
   width: 50vw;
   height: auto;

@@ -1,5 +1,12 @@
 const divId = "Container"
 
+const date = new Date()
+const hour = date.getHours()
+let greeting
+if (hour >= 6 && hour < 12) greeting = "Good Morning"
+if (hour >= 12 && hour < 18) greeting = "Good Afternoon"
+if ((hour >= 18 && hour < 23) || (hour >= 0 && hour < 6)) greeting = "Good Evening"
+
 function Renderer(id, inner) {
   document.getElementById(id).innerHTML = inner
 }
@@ -32,12 +39,13 @@ const activePage = {
 }
 
 function Portfolio() {
+  slideIndex = 1
   return ` 
         <div id="Content">
           <h1>My Portfolio</h1>
           <center>
             <div class="portfolio__container">
-              <div class="project fade">
+              <div class="project first">
                 <img src="./img/projects/snake_game.PNG" alt="Snake Game">
                 <div class="project__description"></div>
               </div>
@@ -83,8 +91,7 @@ function Contact() {
                 <h5>
                     Do you want to talk? Any doubt about my projects? Want me as part of your team? <br>
                     You can reach me @ <a id="email__link" href="mailto:denis.r.lima88@gmail.com"
-                    onmouseover="generateRandomChar(24, this)" 
-                    onmouseout=" returnNormalText('denis.r.lima88@gmail.com', this)">denis.r.lima88@gmail.com</a>
+                    onmouseover="generateRandomChar(this)">denis.r.lima88@gmail.com</a>
                     <br><br>
                     You can also find me on:
                 </h5>

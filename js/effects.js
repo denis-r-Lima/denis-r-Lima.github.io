@@ -8,12 +8,12 @@ function menuButton(link, e) {
   let select = document.querySelector(".Selected")
   if (select) select.classList.remove("Selected")
   e.classList.add("Selected")
-  if (link === "Portfolio") showSlides(1)
+  // if (link === "Portfolio") currentSlide(1)
 }
 
 let i = 0
 let j = 0
-const txt1 = "Hello there! I am Denis Lima,"
+const txt1 = `${greeting}! I am Denis Lima,`
 const txt2 = "and I'm a Full Stack JS Developer!"
 let typeSpeed
 
@@ -34,10 +34,15 @@ function typeWriter() {
 
 let k = 0
 let randomSpeed
+let normalText
 
-function generateRandomChar(n, e) {
-  const source = "abcdefghijklmnopqrstuvxywz@."
-  let string = " "
+function generateRandomChar(e) {
+  const source = "ABCDEFGHIJKLMNOPQRSTUVXYWZabcdefghijklmnopqrstuvxywz@."
+  let string = ""
+
+  if (k === 0) normalText = e.innerHTML
+  let n = normalText.length
+
   for (let i = 0; i < n; i++) {
     string += source.charAt(Math.floor(Math.random() * (source.length - 1)))
   }
@@ -48,9 +53,9 @@ function generateRandomChar(n, e) {
   randomSpeed = Math.random() * (300 - 50) + 50
 
   if (k < 10) {
-    setTimeout(() => generateRandomChar(n, e), randomSpeed)
+    setTimeout(() => generateRandomChar(e), randomSpeed)
   } else {
-    returnNormalText("denis.r.lima88@gmail.com", e)
+    returnNormalText(normalText, e)
   }
 }
 
