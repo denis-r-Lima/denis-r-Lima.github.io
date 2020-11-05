@@ -1,5 +1,6 @@
 .portfolio__container {
-  width: 50vw;
+  width: 60vw;
+  min-width: 250px;
   height: auto;
   position: relative;
   margin: 10px;
@@ -24,7 +25,8 @@
 }
 
 .project img {
-  width: 50vw;
+  width: 60vw;
+  min-width: 250px;
   height: auto;
   margin: 0;
   padding: 0;
@@ -76,6 +78,7 @@
   padding-top: 0;
   white-space: nowrap;
   font-size: clamp(8px, 1.6vw, 14px);
+  z-index: 8;
 }
 
 .down__button {
@@ -93,7 +96,7 @@
 }
 
 .down__button > img {
-  height: 8px;
+  height: clamp(3px, 1vw, 8px);
   width: auto;
 }
 

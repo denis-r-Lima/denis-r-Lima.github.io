@@ -28,7 +28,7 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "")
   }
-  slides[slideIndex - 1].style.width = "70vw"
+  slides[slideIndex - 1].style.width = "100%"
   dots[slideIndex - 1].className += " active"
   setTimeout(() => {
     slides[slideIndex - 1].className += " active__slide"
