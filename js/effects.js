@@ -8,7 +8,7 @@ function menuButton(link, e) {
   let select = document.querySelector(".Selected")
   if (select) select.classList.remove("Selected")
   e.classList.add("Selected")
-  // if (link === "Portfolio") currentSlide(1)
+  if (link === "Portfolio") currentSlide(1)
 }
 
 let i = 0

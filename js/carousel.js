@@ -18,6 +18,10 @@ function showSlides(n) {
   if (n < 1) {
     slideIndex = slides.length
   }
+  let slide = document.querySelector(".active__slide")
+  if (slide) {
+    slide.classList.remove("active__slide")
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.width = "0"
   }
@@ -26,4 +30,7 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.width = "70vw"
   dots[slideIndex - 1].className += " active"
+  setTimeout(() => {
+    slides[slideIndex - 1].className += " active__slide"
+  }, 100)
 }

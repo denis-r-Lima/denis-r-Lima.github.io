@@ -2,10 +2,10 @@ const divId = "Container"
 
 const date = new Date()
 const hour = date.getHours()
-let greeting
-if (hour >= 6 && hour < 12) greeting = "Good Morning"
+let greeting = "Hello There"
+if (hour >= 5 && hour < 12) greeting = "Good Morning"
 if (hour >= 12 && hour < 18) greeting = "Good Afternoon"
-if ((hour >= 18 && hour < 23) || (hour >= 0 && hour < 6)) greeting = "Good Evening"
+if ((hour >= 18 && hour < 23) || (hour >= 0 && hour < 5)) greeting = "Good Evening"
 
 function Renderer(id, inner) {
   document.getElementById(id).innerHTML = inner
@@ -45,13 +45,25 @@ function Portfolio() {
           <h1>My Portfolio</h1>
           <center>
             <div class="portfolio__container">
-              <div class="project first">
-                <img src="./img/projects/snake_game.PNG" alt="Snake Game">
-                <div class="project__description"></div>
+              <div class="project">
+                <img src="./img/projects/snake_game.PNG" alt="Snake Game" onclick="document.getElementById('slide1').style.display = 'flex'">
+                <div class="project__description">
+                  <h3>Snake Game</h3><br>
+                    Snake is a vintage mobile game, on this project I learned how to manipulate canvas and manage key press event listener with pure HTML, CSS and JavaScript.<br><br>
+                    The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
+                </div>
+                <div class="modal" id="slide1" onclick="this.style.display = 'none'"><img src="./img/projects/snake_game.PNG" alt="Snake Game">
+                </div>
               </div>
               <div class="project">
-                <img src="./img/projects/chat_live.PNG" alt="Chat Live">
-                <div class="project__description"></div>
+                <img src="./img/projects/chat_live.PNG" alt="Chat Live" onclick="document.getElementById('slide2').style.display = 'flex'">
+                <div class="project__description">
+                  <h3>Chat Live</h3><br>
+                  Chat live is a project of a chat page, on this project a Node.js server was created using express and socketIO for communication.<br><br>
+                  The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
+                </div>
+                <div class="modal" id="slide2" onclick="this.style.display = 'none'"><img src="./img/projects/chat_live.PNG" alt="Chat Live">
+                </div>
               </div>
               <div class="project">
                 <h1>Projeto 3</h1>
