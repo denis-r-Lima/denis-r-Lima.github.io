@@ -48,6 +48,7 @@ function Portfolio() {
               <div class="project">
                 <img src="./img/projects/snake_game.PNG" alt="Snake Game" onclick="document.getElementById('slide1').style.display = 'flex'">
                 <div class="project__description">
+                <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
                   <h3>Snake Game</h3><br>
                     Snake is a vintage mobile game, on this project I learned how to manipulate canvas and manage key press event listener with pure HTML, CSS and JavaScript.<br><br>
                     The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
@@ -58,6 +59,9 @@ function Portfolio() {
               <div class="project">
                 <img src="./img/projects/chat_live.PNG" alt="Chat Live" onclick="document.getElementById('slide2').style.display = 'flex'">
                 <div class="project__description">
+                  <center>
+                    <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
+                  </center>
                   <h3>Chat Live</h3><br>
                   Chat live is a project of a chat page, on this project a Node.js server was created using express and socketIO for communication.<br><br>
                   The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
@@ -67,15 +71,21 @@ function Portfolio() {
               </div>
               <div class="project">
                 <h1>Projeto 3</h1>
-                <div class="project__description"></div>
+                <div class="project__description">
+                <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
+                </div>
               </div>
               <div class="project">
                 <h1>Projeto 4</h1>
-                <div class="project__description"></div>
+                <div class="project__description">
+                <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
+                </div>
               </div>
               <div class="project">
                 <h1>Projeto 5</h1>
-                <div class="project__description"></div>
+                <div class="project__description">
+                <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
+                </div>
               </div>
               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
               <a class="next" onclick="plusSlides(1)">&#10095;</a>

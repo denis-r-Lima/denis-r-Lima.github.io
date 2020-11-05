@@ -34,3 +34,18 @@ function showSlides(n) {
     slides[slideIndex - 1].className += " active__slide"
   }, 100)
 }
+
+function dropDown() {
+  let descriptions = document.getElementsByClassName("project__description")
+  let downButton = document.getElementsByClassName("down__button")
+
+  if (downButton[slideIndex - 1].classList.contains("back")) {
+    descriptions[slideIndex - 1].style.height = "auto"
+    downButton[slideIndex - 1].innerHTML = "<img src='./img/arrow_down.svg'>"
+    downButton[slideIndex - 1].classList.remove("back")
+  } else {
+    descriptions[slideIndex - 1].style.height = "15px"
+    downButton[slideIndex - 1].innerHTML = "<img src='./img/arrow_up.svg'>"
+    downButton[slideIndex - 1].classList.add("back")
+  }
+}
