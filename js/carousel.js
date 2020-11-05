@@ -40,11 +40,11 @@ function dropDown() {
   let downButton = document.getElementsByClassName("down__button")
 
   if (downButton[slideIndex - 1].classList.contains("back")) {
-    descriptions[slideIndex - 1].style.height = "auto"
+    descriptions[slideIndex - 1].style.height = "100%"
     downButton[slideIndex - 1].innerHTML = "<img src='./img/arrow_down.svg'>"
     downButton[slideIndex - 1].classList.remove("back")
   } else {
-    descriptions[slideIndex - 1].style.height = "15px"
+    descriptions[slideIndex - 1].style.height = "20px"
     downButton[slideIndex - 1].innerHTML = "<img src='./img/arrow_up.svg'>"
     downButton[slideIndex - 1].classList.add("back")
   }

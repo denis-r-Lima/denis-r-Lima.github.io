@@ -42,7 +42,7 @@
   top: 50%;
   width: auto;
   margin-top: -22px;
-  padding: 16px;
+  padding: 10px;
   color: #25291c;
   font-weight: bold;
   font-size: 18px;
@@ -57,12 +57,12 @@
 }
 
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+  right: -31px;
 }
 
 .prev {
-  left: 0;
+  left: -31px;
+  border-radius: 3px 0 0 3px;
 }
 
 .project__description {
@@ -70,15 +70,22 @@
   bottom: 0;
   right: 0;
   left: 0;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   text-align: left;
   overflow: hidden;
   padding: 20px;
   padding-top: 0;
+  padding-bottom: 0;
   white-space: nowrap;
-  font-size: clamp(8px, 1.6vw, 14px);
+  font-size: clamp(9px, 1.6vw, 14px);
   z-index: 8;
+  transition: 0.3s;
+}
+
+.project__description > h3 {
+  margin-top: 3px;
 }
 
 .down__button {
