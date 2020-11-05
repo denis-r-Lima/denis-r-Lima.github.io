@@ -23,7 +23,7 @@
   flex-direction: row-reverse;
   align-items: center;
   justify-content: flex-start;
-  z-index: 2;
+  z-index: 3;
 }
 
 .burgerMenu {
