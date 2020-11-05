@@ -41,3 +41,7 @@
 .portfolio h2 {
   font-size: clamp(12px, 2vw, 18px);
 }
+
+#email__link:hover {
+  color: #56583d;
+}

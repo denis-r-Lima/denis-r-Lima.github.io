@@ -8,6 +8,7 @@ function menuButton(link, e) {
   let select = document.querySelector(".Selected")
   if (select) select.classList.remove("Selected")
   e.classList.add("Selected")
+  if (link === "Portfolio") showSlides(1)
 }
 
 let i = 0
@@ -29,6 +30,33 @@ function typeWriter() {
       setTimeout(typeWriter, typeSpeed)
     }
   }
+}
+
+let k = 0
+let randomSpeed
+
+function generateRandomChar(n, e) {
+  const source = "abcdefghijklmnopqrstuvxywz@."
+  let string = " "
+  for (let i = 0; i < n; i++) {
+    string += source.charAt(Math.floor(Math.random() * (source.length - 1)))
+  }
+  e.innerHTML = string
+
+  k++
+
+  randomSpeed = Math.random() * (300 - 50) + 50
+
+  if (k < 10) {
+    setTimeout(() => generateRandomChar(n, e), randomSpeed)
+  } else {
+    returnNormalText("denis.r.lima88@gmail.com", e)
+  }
+}
+
+function returnNormalText(text, e) {
+  e.innerHTML = text
+  k = 0
 }
 
 typeWriter()
