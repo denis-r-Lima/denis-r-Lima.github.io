@@ -42,6 +42,7 @@ const activePage = {
   About,
 }
 
+//Portfolio HTML code
 function Portfolio() {
   slideIndex = 1
   return ` 
@@ -125,6 +126,8 @@ function Portfolio() {
         `
 }
 
+//Contact HTML code
+
 function Contact() {
   return `
         <div id="Content">
@@ -147,6 +150,7 @@ function Contact() {
         `
 }
 
+//About HTML code
 function About() {
   return `
         <div id="Content">
