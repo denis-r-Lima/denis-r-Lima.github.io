@@ -110,11 +110,14 @@
   .burgerMenu {
     width: calc(100% - 20px);
   }
+  .nav__active .burgerMenu {
+    border-radius: 5px 5px 0 0;
+  }
   .side__Menu {
     flex-direction: column;
     height: 0;
     width: 100%;
-    transition: 0.4s;
+    border-radius: 0 0 5px 5px;
   }
   .nav__active .side__Menu {
     height: 110px;
