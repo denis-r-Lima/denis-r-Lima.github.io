@@ -98,7 +98,7 @@ function Portfolio() {
                 <h3>EZ Converter</h3><br>
                 Ez converter is a unit converter, this was my first React Native project, given me the opportunity to explore the framework,
                 learning how to prepare the structure for the app and how to animate elements.<br>
-                This project also have a external API integration to get currency exchange rates daily. <br><br>
+                This project also have a external API integration to update currency exchange rates daily. <br><br>
                 The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
               </div>
               <div class="modal" id="slide4" onclick="this.style.display = 'none'"><img src="./img/projects/ez_converter.PNG" alt="Chat Live">
