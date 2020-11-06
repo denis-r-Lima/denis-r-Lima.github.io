@@ -17,6 +17,7 @@
   font-family: "EB Garamond", serif;
   font-size: clamp(10px, 1.8vw, 18px);
   color: #25291c;
+  margin-bottom: 5px;
 }
 
 #about__text {
