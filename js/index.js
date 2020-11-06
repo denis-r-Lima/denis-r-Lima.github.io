@@ -75,7 +75,7 @@ function Portfolio() {
                 </div>
               </div>
               <div class="project">
-                <img src="./img/projects/pictionary.PNG" alt="Chat Live" onclick="document.getElementById('slide3').style.display = 'flex'">
+                <img src="./img/projects/pictionary.PNG" alt="Pictionary" onclick="document.getElementById('slide3').style.display = 'flex'">
                 <div class="project__description">
                   <center>
                     <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
@@ -86,22 +86,22 @@ function Portfolio() {
                   to share the same canvas and all players can see what is being designed. <br><br>
                   The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
                 </div>
-                <div class="modal" id="slide3" onclick="this.style.display = 'none'"><img src="./img/projects/pictionary.PNG" alt="Chat Live">
+                <div class="modal" id="slide3" onclick="this.style.display = 'none'"><img src="./img/projects/pictionary.PNG" alt="Pictionary">
                 </div>
               </div>
               <div class="project">
-              <img src="./img/projects/ez_converter.PNG" alt="Chat Live" onclick="document.getElementById('slide4').style.display = 'flex'">
+              <img src="./img/projects/ez_converter.PNG" alt="EZ Converter" onclick="document.getElementById('slide4').style.display = 'flex'">
               <div class="project__description">
                 <center>
                   <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
                 </center>
                 <h3>EZ Converter</h3><br>
-                Ez converter is a unit converter, this was my first React Native project, given me the opportunity to explore the framework,
+                EZ converter is a unit converter, this was my first React Native project, given me the opportunity to explore the framework,
                 learning how to prepare the structure for the app and how to animate elements.<br>
                 This project also have a external API integration to update currency exchange rates daily. <br><br>
                 The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
               </div>
-              <div class="modal" id="slide4" onclick="this.style.display = 'none'"><img src="./img/projects/ez_converter.PNG" alt="Chat Live">
+              <div class="modal" id="slide4" onclick="this.style.display = 'none'"><img src="./img/projects/ez_converter.PNG" alt="EZ Converter">
               </div>
               </div>
               <div class="project">
