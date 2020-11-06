@@ -34,7 +34,17 @@
   cursor: pointer;
   padding: 10px;
   background-color: rgba(33, 33, 33, 0.7);
+  border-radius: 5px;
   user-select: none;
+  transition: border-radius 0.35s step-end;
+}
+
+.burgerMenu:hover > .bar1 {
+  background-color: #e6e49f;
+}
+
+.burgerMenu:hover > .bar2 {
+  background-color: #e6e49f;
 }
 
 .bar1,
@@ -43,7 +53,7 @@
   height: 2px;
   background-color: #f2f2f2;
   margin: 3px 0;
-  transition: 0.4s;
+  transition: transform 0.4s;
 }
 
 .side__Menu {
@@ -55,6 +65,7 @@
   transition: 0.4s;
   background-color: rgba(33, 33, 33, 0.7);
   user-select: none;
+  border-radius: 5px 0 0 5px;
 }
 
 .nav__active .burgerMenu .bar1 {
@@ -67,6 +78,11 @@
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg) translate(-3px, -3px);
   background-color: #e6e49f;
+}
+
+.nav__active .burgerMenu {
+  border-radius: 0 5px 5px 0;
+  transition: 0.4s step-start;
 }
 
 .nav__active .side__Menu {

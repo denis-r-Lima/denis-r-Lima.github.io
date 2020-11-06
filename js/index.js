@@ -54,7 +54,8 @@ function Portfolio() {
                 <div class="project__description">
                 <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
                   <h3>Snake Game</h3><br>
-                    Snake is a vintage mobile game, on this project I learned how to manipulate canvas and manage key press event listener with pure HTML, CSS and JavaScript.<br><br>
+                    Snake is a vintage mobile game, on this project I learned how to manipulate canvas and manage key press event listener with pure HTML, 
+                    CSS and JavaScript.<br><br>
                     The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
                 </div>
                 <div class="modal" id="slide1" onclick="this.style.display = 'none'"><img src="./img/projects/snake_game.PNG" alt="Snake Game">
@@ -67,23 +68,41 @@ function Portfolio() {
                     <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
                   </center>
                   <h3>Chat Live</h3><br>
-                  Chat live is a project of a chat page, on this project a Node.js server was created using express and socketIO for communication.<br><br>
+                  Chat live is a project of a chat page, on this project a Node.js server was created using express and socket.IO for communication.<br><br>
                   The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
                 </div>
                 <div class="modal" id="slide2" onclick="this.style.display = 'none'"><img src="./img/projects/chat_live.PNG" alt="Chat Live">
                 </div>
               </div>
               <div class="project">
-                <h1>Projeto 3</h1>
+                <img src="./img/projects/pictionary.PNG" alt="Chat Live" onclick="document.getElementById('slide3').style.display = 'flex'">
                 <div class="project__description">
-                <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
+                  <center>
+                    <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
+                  </center>
+                  <h3>Pictionary</h3><br>
+                  Pictionary is a drawing game in which one person draws and another teammates need to identify the word. <br>
+                  For this project a Node.js server was created using express and socket.IO to communicate several players 
+                  to share the same canvas and all players can see what is being designed. <br><br>
+                  The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
+                </div>
+                <div class="modal" id="slide3" onclick="this.style.display = 'none'"><img src="./img/projects/pictionary.PNG" alt="Chat Live">
                 </div>
               </div>
               <div class="project">
-                <h1>Projeto 4</h1>
-                <div class="project__description">
-                <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
-                </div>
+              <img src="./img/projects/ez_converter.PNG" alt="Chat Live" onclick="document.getElementById('slide4').style.display = 'flex'">
+              <div class="project__description">
+                <center>
+                  <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
+                </center>
+                <h3>EZ Converter</h3><br>
+                Ez converter is a unit converter, this was my first React Native project, given me the opportunity to explore the framework,
+                learning how to prepare the structure for the app and how to animate elements.<br>
+                This project also have a external API integration to get currency exchange rates daily. <br><br>
+                The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
+              </div>
+              <div class="modal" id="slide4" onclick="this.style.display = 'none'"><img src="./img/projects/ez_converter.PNG" alt="Chat Live">
+              </div>
               </div>
               <div class="project">
                 <h1>Projeto 5</h1>
