@@ -97,7 +97,7 @@ function Portfolio() {
                   <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
                 </center>
                 <h3>EZ Converter</h3><br>
-                EZ converter is a unit converter, this was my first React Native project, given me the opportunity to explore the framework,
+                EZ converter is a unit converter, this was my first React Native project, giving me the opportunity to explore the framework,
                 learning how to prepare the structure for the app and how to animate elements.<br>
                 This project also have a external API integration to update currency exchange rates daily. <br><br>
                 The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
