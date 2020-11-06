@@ -1,5 +1,9 @@
 const divId = "Container"
 
+addEventListener("load", () => {
+  document.body.style.visibility = "visible"
+})
+
 const date = new Date()
 const hour = date.getHours()
 let greeting = "Hello There"
