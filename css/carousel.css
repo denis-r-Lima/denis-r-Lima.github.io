@@ -24,7 +24,7 @@
 
 .project img {
   width: 60vw;
-  min-width: 250px;
+  min-width: 280px;
   height: auto;
   margin: 0;
   padding: 0;
@@ -151,14 +151,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 5;
 }
 
 .modal img {
-  width: 60vw;
+  width: 65vw;
   height: auto;
   z-index: 6;
   cursor: zoom-out;
