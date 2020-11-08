@@ -9,6 +9,7 @@ let isTouch = false
 window.addEventListener("touchstart", () => {
   if (!isTouch) {
     document.documentElement.style.setProperty("--prev-nex-display", "none")
+    isTouch = true
   }
 })
 
