@@ -67,11 +67,11 @@ function touchHandler() {
   })
 
   portfolio.addEventListener("touchend", () => {
-    if (xEnd + 120 < xStart) {
+    if (xEnd + 80 < xStart) {
       plusSlides(1)
       return
     } else {
-      if (xStart + 120 < xEnd) {
+      if (xStart + 80 < xEnd) {
         plusSlides(-1)
         return
       }
