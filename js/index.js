@@ -9,7 +9,7 @@ const hour = date.getHours()
 let greeting = "Hello There"
 if (hour >= 5 && hour < 12) greeting = "Good Morning"
 if (hour >= 12 && hour < 18) greeting = "Good Afternoon"
-if ((hour >= 18 && hour < 23) || (hour >= 0 && hour < 5)) greeting = "Good Evening"
+if ((hour >= 18 && hour <= 23) || (hour >= 0 && hour < 5)) greeting = "Good Evening"
 
 function Renderer(id, inner) {
   document.getElementById(id).innerHTML = inner
