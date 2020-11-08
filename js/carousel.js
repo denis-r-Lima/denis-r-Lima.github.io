@@ -49,3 +49,29 @@ function dropDown() {
     downButton[slideIndex - 1].classList.add("back")
   }
 }
+
+function touchHandler() {
+  let xStart
+  let xEnd
+
+  document.querySelector(".portfolio__container").addEventListener("touchstart", (e) => {
+    // e.preventDefault()
+    xStart = e.targetTouches[0].pageX
+  })
+
+  document.querySelector(".portfolio__container").addEventListener("touchmove", (e) => {
+    e.preventDefault()
+    xEnd = e.targetTouches[0].pageX
+    if (xEnd + 60 < xStart) {
+      plusSlides(1)
+      xStart = 0
+      return
+    } else {
+      if (xStart + 60 < xEnd) {
+        plusSlides(-1)
+        xStart = window.innerWidth
+        return
+      }
+    }
+  })
+}
