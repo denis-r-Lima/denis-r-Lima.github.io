@@ -49,10 +49,10 @@ function Portfolio() {
         <div id="Content">
           <h1>My Portfolio</h1>
           <center>
-            <div class="portfolio__container">
+            <div class="portfolio__container" ontouchstart="touchScreenHandlerX(event)">
               <div class="project">
                 <img src="./img/projects/snake_game.PNG" alt="Snake Game" onclick="document.getElementById('slide1').style.display = 'flex'">
-                <div class="project__description">
+                <div class="project__description" ontouchstart="touchScreenHandlerY(event)">
                 <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
                   <h3>Snake Game</h3><br>
                     Snake is a vintage mobile game, on this project I learned how to manipulate canvas and manage key press event listener with pure HTML, 
@@ -64,7 +64,7 @@ function Portfolio() {
               </div>
               <div class="project">
                 <img src="./img/projects/chat_live.PNG" alt="Chat Live" onclick="document.getElementById('slide2').style.display = 'flex'">
-                <div class="project__description">
+                <div class="project__description" ontouchstart="touchScreenHandlerY(event)">
                   <center>
                     <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
                   </center>
@@ -77,7 +77,7 @@ function Portfolio() {
               </div>
               <div class="project">
                 <img src="./img/projects/pictionary.PNG" alt="Pictionary" onclick="document.getElementById('slide3').style.display = 'flex'">
-                <div class="project__description">
+                <div class="project__description" ontouchstart="touchScreenHandlerY(event)">
                   <center>
                     <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
                   </center>
@@ -92,7 +92,7 @@ function Portfolio() {
               </div>
               <div class="project">
               <img src="./img/projects/ez_converter.PNG" alt="EZ Converter" onclick="document.getElementById('slide4').style.display = 'flex'">
-              <div class="project__description">
+              <div class="project__description" ontouchstart="touchScreenHandlerY(event)">
                 <center>
                   <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
                 </center>
@@ -106,8 +106,8 @@ function Portfolio() {
               </div>
               </div>
               <div class="project">
-                <h1>Projeto 5</h1>
-                <div class="project__description">
+                <h1>Project 5</h1>
+                <div class="project__description" ontouchstart="touchScreenHandlerY(event)">
                 <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
                 </div>
               </div>
@@ -139,7 +139,7 @@ function Contact() {
                 <h5>
                     Do you want to talk? Any doubt about my projects? Want me as part of your team? <br>
                     You can reach me @ <a id="email__link" href="mailto:denis.r.lima88@gmail.com"
-                    onmouseover="generateRandomChar(this)">denis.r.lima88@gmail.com</a>
+                    onmouseover="handleChangeCharts(this)">denis.r.lima88@gmail.com</a>
                     <br><br>
                     You can also find me on:
                 </h5>

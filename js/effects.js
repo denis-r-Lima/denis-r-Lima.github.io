@@ -10,7 +10,7 @@ function menuButton(link, e) {
   e.classList.add("Selected")
   if (link === "Portfolio") {
     currentSlide(1)
-    touchScreenHandler()
+    //  touchScreenHandler()
   }
 }
 
@@ -35,28 +35,31 @@ function typeWriter() {
   }
 }
 
+function generateRandomString(length) {
+  const source = "ABCDEFGHIJKLMNOPQRSTUVXYWZabcdefghijklmnopqrstuvxywz@."
+  let string = source.charAt(Math.floor(Math.random() * (source.length - 1)))
+
+  for (let i = 1; i < length; i++) {
+    string += source.charAt(Math.floor(Math.random() * (source.length - 1)))
+  }
+
+  return string
+}
+
 let k = 0
 let randomSpeed
 let originalText
+let textLength
 
-function generateRandomChar(e) {
-  const source = "ABCDEFGHIJKLMNOPQRSTUVXYWZabcdefghijklmnopqrstuvxywz@."
-  let string = ""
-
-  if (k === 0) originalText = e.innerHTML
-  let n = originalText.length
-
-  for (let i = 0; i < n; i++) {
-    string += source.charAt(Math.floor(Math.random() * (source.length - 1)))
-  }
-  e.innerHTML = string
+function applyRandomString(e) {
+  e.innerHTML = generateRandomString(textLength)
 
   k++
 
   randomSpeed = Math.random() * (300 - 50) + 50
 
   if (k < 10) {
-    setTimeout(() => generateRandomChar(e), randomSpeed)
+    setTimeout(() => applyRandomString(e), randomSpeed)
   } else {
     returnOriginalText(originalText, e)
   }
@@ -64,7 +67,19 @@ function generateRandomChar(e) {
 
 function returnOriginalText(text, e) {
   e.innerHTML = text
+}
+
+function handleChangeCharts(e) {
   k = 0
+  originalText = e.innerHTML
+  textLength = originalText.length
+
+  applyRandomString(e)
+
+  e.addEventListener("mouseleave", () => {
+    returnOriginalText(originalText, e)
+    k = 11
+  })
 }
 
 typeWriter()

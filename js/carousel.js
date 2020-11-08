@@ -50,19 +50,12 @@ function dropDown() {
   }
 }
 
-function touchScreenHandler() {
-  let xStart
-  let xEnd
+function touchScreenHandlerX(e) {
+  let xStart = e.targetTouches[0].pageX
+  let xEnd = xStart
   let action = true
 
-  let portfolio = document.querySelector(".portfolio__container")
-
-  portfolio.addEventListener("touchstart", (e) => {
-    xStart = xEnd = e.targetTouches[0].pageX
-    action = true
-  })
-
-  portfolio.addEventListener("touchmove", (e) => {
+  e.target.addEventListener("touchmove", (e) => {
     e.preventDefault()
     xEnd = e.targetTouches[0].pageX
     if (action) {
@@ -78,6 +71,26 @@ function touchScreenHandler() {
         }
       }
     }
+    return
+  })
+}
+
+function touchScreenHandlerY(e) {
+  let yStart = e.targetTouches[0].pageY
+  let yEnd = yStart
+  let action = true
+
+  e.target.addEventListener("touchmove", (e) => {
+    e.preventDefault()
+    yEnd = e.targetTouches[0].pageY
+    if (action) {
+      if (yStart + 60 < yEnd) {
+        dropDown()
+        action = false
+        return
+      }
+    }
+
     return
   })
 }
