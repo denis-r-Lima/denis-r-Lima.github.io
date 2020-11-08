@@ -62,12 +62,12 @@ function touchHandler() {
   document.querySelector(".portfolio__container").addEventListener("touchmove", (e) => {
     e.preventDefault()
     xEnd = e.targetTouches[0].pageX
-    if (xEnd + 60 < xStart) {
+    if (xEnd + 40 < xStart) {
       plusSlides(1)
       xStart = 0
       return
     } else {
-      if (xStart + 60 < xEnd) {
+      if (xStart + 40 < xEnd) {
         plusSlides(-1)
         xStart = window.innerWidth
         return
