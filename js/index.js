@@ -1,7 +1,15 @@
 const targetDivId = "Container"
 
-addEventListener("load", () => {
+window.addEventListener("load", () => {
   document.body.style.visibility = "visible"
+})
+
+let isTouch = false
+
+window.addEventListener("touchstart", () => {
+  if (!isTouch) {
+    document.documentElement.style.setProperty("--prev-nex-display", "none")
+  }
 })
 
 const date = new Date()
@@ -55,7 +63,7 @@ function Portfolio() {
                 <div class="project__description" ontouchstart="touchScreenHandlerY(event)">
                 <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
                   <h3>Snake Game</h3><br>
-                    Snake is a vintage mobile game, on this project I learned how to manipulate canvas and manage key press event listener with pure HTML, 
+                    Snake is a vintage mobile game, on this project I learned how to manipulate canvas and manage key press event listener with plain HTML, 
                     CSS and JavaScript.<br><br>
                     The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
                 </div>

@@ -10,7 +10,6 @@ function menuButton(link, e) {
   e.classList.add("Selected")
   if (link === "Portfolio") {
     currentSlide(1)
-    //  touchScreenHandler()
   }
 }
 

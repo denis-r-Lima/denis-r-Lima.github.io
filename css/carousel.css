@@ -1,3 +1,7 @@
+:root {
+  --prev-nex-display: block;
+}
+
 .portfolio__container {
   width: 60vw;
   min-width: 280px;
@@ -37,6 +41,7 @@
   cursor: pointer;
   float: none;
   position: absolute;
+  display: var(--prev-nex-display);
   top: 50%;
   width: auto;
   margin-top: -22px;
