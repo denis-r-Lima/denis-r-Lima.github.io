@@ -53,27 +53,29 @@ function dropDown() {
 function touchHandler() {
   let xStart
   let xEnd
+  let action = true
 
   let portfolio = document.querySelector(".portfolio__container")
 
   portfolio.addEventListener("touchstart", (e) => {
-    xStart = e.targetTouches[0].pageX
-    xEnd = xStart
+    xStart = xEnd = e.targetTouches[0].pageX
+    action = true
   })
 
   portfolio.addEventListener("touchmove", (e) => {
     e.preventDefault()
     xEnd = e.targetTouches[0].pageX
-  })
-
-  portfolio.addEventListener("touchend", () => {
-    if (xEnd + 80 < xStart) {
-      plusSlides(1)
-      return
-    } else {
-      if (xStart + 80 < xEnd) {
-        plusSlides(-1)
+    if (action) {
+      if (xEnd + 80 < xStart) {
+        plusSlides(1)
+        action = false
         return
+      } else {
+        if (xStart + 80 < xEnd) {
+          plusSlides(-1)
+          action = false
+          return
+        }
       }
     }
     return
