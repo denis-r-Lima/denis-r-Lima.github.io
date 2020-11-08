@@ -1,4 +1,4 @@
-const divId = "Container"
+const targetDivId = "Container"
 
 addEventListener("load", () => {
   document.body.style.visibility = "visible"
@@ -21,7 +21,7 @@ function StateHandler(init) {
     this.setState = (value) => {
       if (this.state !== value) {
         this.state = value
-        Renderer(divId, Main())
+        Renderer(targetDivId, Main())
         return
       } else {
         return

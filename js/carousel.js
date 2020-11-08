@@ -50,7 +50,7 @@ function dropDown() {
   }
 }
 
-function touchHandler() {
+function touchScreenHandler() {
   let xStart
   let xEnd
   let action = true
