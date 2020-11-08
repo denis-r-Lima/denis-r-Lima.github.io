@@ -57,8 +57,8 @@ function touchHandler() {
   let portfolio = document.querySelector(".portfolio__container")
 
   portfolio.addEventListener("touchstart", (e) => {
-    // e.preventDefault()
     xStart = e.targetTouches[0].pageX
+    xEnd = xStart
   })
 
   portfolio.addEventListener("touchmove", (e) => {
@@ -69,12 +69,10 @@ function touchHandler() {
   portfolio.addEventListener("touchend", () => {
     if (xEnd + 120 < xStart) {
       plusSlides(1)
-      xStart = 0
       return
     } else {
       if (xStart + 120 < xEnd) {
         plusSlides(-1)
-        xStart = window.innerWidth
         return
       }
     }
