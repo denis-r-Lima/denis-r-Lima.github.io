@@ -67,12 +67,12 @@ function touchHandler() {
   })
 
   portfolio.addEventListener("touchend", () => {
-    if (xEnd + 40 < xStart) {
+    if (xEnd + 120 < xStart) {
       plusSlides(1)
       xStart = 0
       return
     } else {
-      if (xStart + 40 < xEnd) {
+      if (xStart + 120 < xEnd) {
         plusSlides(-1)
         xStart = window.innerWidth
         return
