@@ -100,26 +100,33 @@ function Portfolio() {
                 </div>
               </div>
               <div class="project">
-              <img src="./img/projects/ez_converter.PNG" alt="EZ Converter" onclick="document.getElementById('slide4').style.display = 'flex'">
+                <img src="./img/projects/ez_converter.PNG" alt="EZ Converter" onclick="document.getElementById('slide4').style.display = 'flex'">
+                <div class="project__description" ontouchstart="touchScreenHandlerY(event)">
+                  <center>
+                    <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
+                  </center>
+                  <h3>EZ Converter</h3><br>
+                  EZ converter is a unit converter, this was my first React Native project, giving me the opportunity to explore the framework,
+                  learning how to prepare the structure for the app and how to animate elements.<br>
+                  This project also have a external API integration to update currency exchange rates daily. <br><br>
+                  The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
+                </div>
+                <div class="modal" id="slide4" onclick="this.style.display = 'none'"><img src="./img/projects/ez_converter.PNG" alt="EZ Converter">
+                </div>
+              </div>
+              <div class="project">
+              <img src="./img/projects/portfolio.PNG" alt="EZ Converter" onclick="document.getElementById('slide5').style.display = 'flex'">
               <div class="project__description" ontouchstart="touchScreenHandlerY(event)">
                 <center>
                   <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
                 </center>
-                <h3>EZ Converter</h3><br>
-                EZ converter is a unit converter, this was my first React Native project, giving me the opportunity to explore the framework,
-                learning how to prepare the structure for the app and how to animate elements.<br>
-                This project also have a external API integration to update currency exchange rates daily. <br><br>
+                <h3>My Portfolio</h3><br>
+                This is basically the webpage that you are on =). <br><br>
                 The project´s code can be found on  my <a href="https://github.com/denis-r-Lima" target="_blank">GitHub</a>.
               </div>
-              <div class="modal" id="slide4" onclick="this.style.display = 'none'"><img src="./img/projects/ez_converter.PNG" alt="EZ Converter">
+              <div class="modal" id="slide5" onclick="this.style.display = 'none'"><img src="./img/projects/portfolio.PNG" alt="EZ Converter">
               </div>
-              </div>
-              <div class="project">
-                <h1>Project 5</h1>
-                <div class="project__description" ontouchstart="touchScreenHandlerY(event)">
-                <div class="down__button" onclick="dropDown()"><img src='./img/arrow_down.svg'></div>
-                </div>
-              </div>
+            </div>
               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
               <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
