@@ -31,16 +31,11 @@ function StateHandler(init) {
       if (this.state !== value) {
         this.state = value
         Renderer(targetDivId, Main())
-        return
-      } else {
-        return
       }
     }
-
-    return [this.showState, this.setState]
   }
-
-  return new State(init)
+  let state = new State(init)
+  return [state.showState, state.setState]
 }
 
 const [currentPage, setCurrentPage] = StateHandler("")
