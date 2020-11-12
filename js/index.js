@@ -24,16 +24,23 @@ function Renderer(id, inner) {
   document.getElementById(id).innerHTML = inner
 }
 function StateHandler(init) {
-  function State(init) {
-    this.state = init
-    this.showState = () => this.state
-    this.setState = (value) => {
+  class State {
+    constructor(init) {
+      this.state = init
+    }
+
+    get showState() {
+      return this.state
+    }
+
+    setState = (value) => {
       if (this.state !== value) {
         this.state = value
         Renderer(targetDivId, Main())
       }
     }
   }
+
   let state = new State(init)
   return [state.showState, state.setState]
 }
@@ -181,5 +188,5 @@ function About() {
 }
 
 function Main() {
-  return activePage[currentPage()]()
+  return activePage[currentPage]()
 }
