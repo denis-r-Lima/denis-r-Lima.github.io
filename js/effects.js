@@ -3,7 +3,7 @@ function menuClick() {
 }
 
 function menuButton(link, e) {
-  setCurrentPage(link)
+  currentPage.setState(link)
   document.getElementById("top").style.height = "40vh"
   let select = document.querySelector(".Selected")
   if (select) select.classList.remove("Selected")

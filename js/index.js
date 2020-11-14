@@ -33,7 +33,7 @@ function StateHandler(init) {
       return this.state
     }
 
-    setState = (value) => {
+    setState(value) {
       if (this.state !== value) {
         this.state = value
         Renderer(targetDivId, Main())
@@ -41,11 +41,10 @@ function StateHandler(init) {
     }
   }
 
-  let state = new State(init)
-  return [state.showState, state.setState]
+  return new State()
 }
 
-const [currentPage, setCurrentPage] = StateHandler("")
+const currentPage = StateHandler("")
 
 const activePage = {
   Portfolio,
@@ -188,5 +187,5 @@ function About() {
 }
 
 function Main() {
-  return activePage[currentPage]()
+  return activePage[currentPage.showState]()
 }
