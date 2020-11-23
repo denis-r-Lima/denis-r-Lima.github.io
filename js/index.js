@@ -133,11 +133,11 @@ function Portfolio() {
             </div>
           </center>
           <div class="dot__container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
+            <div class="dot" onclick="currentSlide(1)"><div class="dotInside"></div></div>
+            <div class="dot" onclick="currentSlide(2)"><div class="dotInside"></div></div>
+            <div class="dot" onclick="currentSlide(3)"><div class="dotInside"></div></div>
+            <div class="dot" onclick="currentSlide(4)"><div class="dotInside"></div></div>
+            <div class="dot" onclick="currentSlide(5)"><div class="dotInside"></div></div>
           </div>
         </div> 
         `
@@ -176,12 +176,13 @@ function About() {
             </h1>
             <h5 id="about__text">
                 Hi, I am Denis Lima, as you can see on the big text above =). <br>
-                I am a petroleum engineer who always was passionate about coding, and motorcycles. Everything started a long time ago, I don't know maybe when I was 14 or 15 years old, personal blogs
-                was the big thing of the moment and I decided to build a small page to provide templates for that, few years latter I started my bachelor degree in engineering
+                I am a petroleum engineer who always was passionate about coding, and motorcycles. Everything started a long time ago, I don't know, maybe when I was 14 or 15 years old, personal blogs
+                was the big thing of the moment and I decided to build a small page to provide templates for that, few years later I started my bachelor degree in engineering
                 and I learned the basics of software development, using C.<br>
                 After finished my degree I started my professional carrier, and it really bothered me that simple tasks could be made easier and more efficient with a proper software,
-                and so I started to develop small applications for the team, and the more I studied about software development the more I fell in love for the subject, and now after working several 
-                years in oil & gas field I am trying to start a new carrier as software developer.  
+                so I started to develop small applications for the team, and the more I studied about software development the more I felt in love for the subject.<br> 
+                Now, after several 
+                years working in oil & gas industry I am ready to start a new carrier as software developer.  
         </div>
         `
 }

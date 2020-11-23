@@ -1,4 +1,5 @@
 let slideIndex = 1
+let timer
 
 function plusSlides(n) {
   showSlides((slideIndex += n))
@@ -10,6 +11,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i
+  clearTimeout(timer)
   let slides = document.getElementsByClassName("project")
   let dots = document.getElementsByClassName("dot")
   if (n > slides.length) {
@@ -33,6 +35,7 @@ function showSlides(n) {
   setTimeout(() => {
     slides[slideIndex - 1].className += " active__slide"
   }, 100)
+  timer = setTimeout(() => showSlides((slideIndex += 1)), 5000)
 }
 
 function dropDown() {
