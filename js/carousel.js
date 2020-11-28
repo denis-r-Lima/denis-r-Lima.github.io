@@ -13,7 +13,8 @@ function showSlides(n) {
   let i
   clearTimeout(timer)
   let slides = document.getElementsByClassName("project")
-  let dots = document.getElementsByClassName("dot")
+  //let dots = document.getElementsByClassName("dot")
+  let circle = document.getElementsByClassName("load")
   if (n > slides.length) {
     slideIndex = 1
   }
@@ -27,11 +28,13 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.width = "0"
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "")
+  for (i = 0; i < circle.length; i++) {
+    //dots[i].className = dots[i].className.replace(" active", "")
+    circle[i].className = circle[i].className.replace(" load_active", "")
   }
   slides[slideIndex - 1].style.width = "100%"
-  dots[slideIndex - 1].className += " active"
+  //dots[slideIndex - 1].className += " active"
+  circle[slideIndex - 1].className += " load_active"
   setTimeout(() => {
     slides[slideIndex - 1].className += " active__slide"
   }, 100)

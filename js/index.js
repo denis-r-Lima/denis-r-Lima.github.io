@@ -132,13 +132,40 @@ function Portfolio() {
               <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
           </center>
-          <div class="dot__container">
+          <div class="rings">
+                <div class="load" onclick="currentSlide(1)">
+                  <svg>
+                    <circle cx="8" cy="8" r="5"></circle>
+                  </svg>
+                </div>
+                <div class="load" onclick="currentSlide(2)">
+                <svg>
+                  <circle cx="8" cy="8" r="5"></circle>
+                </svg>
+              </div>
+              <div class="load" onclick="currentSlide(3)">
+              <svg>
+                <circle cx="8" cy="8" r="5"></circle>
+              </svg>
+            </div>
+            <div class="load" onclick="currentSlide(4)">
+                  <svg>
+                    <circle cx="8" cy="8" r="5"></circle>
+                  </svg>
+                </div>
+                <div class="load" onclick="currentSlide(5)">
+                  <svg>
+                    <circle cx="8" cy="8" r="5"></circle>
+                  </svg>
+                </div>
+          </div>     
+          <!--<div class="dot__container">
             <div class="dot" onclick="currentSlide(1)"><div class="dotInside"></div></div>
             <div class="dot" onclick="currentSlide(2)"><div class="dotInside"></div></div>
             <div class="dot" onclick="currentSlide(3)"><div class="dotInside"></div></div>
             <div class="dot" onclick="currentSlide(4)"><div class="dotInside"></div></div>
             <div class="dot" onclick="currentSlide(5)"><div class="dotInside"></div></div>
-          </div>
+          </div>-->
         </div> 
         `
 }
@@ -162,7 +189,7 @@ function Contact() {
                 </h5>
                 <a href="https://www.linkedin.com/in/denis-roberto-alves-de-almeida-lima-1a122575/" target="_blank"><img src="./img/LI-In-Bug.png" alt="LinkedIn" title="LinkedIn"></a>
                 <a href="https://github.com/denis-r-Lima" target="_blank"><img src="./img/GitHub-Mark-64px.png" alt="GitHub" title="GitHub"></a>
-            </center>
+            </center>   
         </div>
         `
 }
