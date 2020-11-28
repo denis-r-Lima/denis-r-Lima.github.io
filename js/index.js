@@ -181,7 +181,7 @@ function Contact() {
                 </h1>
                 <br>
                 <h5>
-                    Do you want to talk? Any doubt about my projects? Want me as part of your team? <br>
+                    Do you want to talk? Any question about my projects? Want me as part of your team? <br>
                     You can reach me @ <a id="email__link" href="mailto:denis.r.lima88@gmail.com"
                     onmouseover="handleChangeCharts(this)">denis.r.lima88@gmail.com</a>
                     <br><br>

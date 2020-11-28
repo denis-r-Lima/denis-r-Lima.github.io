@@ -190,3 +190,47 @@
   cursor: zoom-out;
   border-radius: 5px;
 }
+
+.load {
+  margin: 1px;
+  cursor: pointer;
+}
+
+.load,
+svg,
+circle {
+  width: 16px;
+  height: 16px;
+}
+
+circle {
+  position: absolute;
+  fill: #bbb;
+  stroke-width: 3px;
+  stroke-dasharray: 32;
+  stroke-linecap: round;
+}
+
+.load circle {
+  stroke-dashoffset: 32;
+  stroke: #717171;
+}
+
+@keyframes percent {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.rings {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.load_active circle {
+  animation: percent 5.5s linear forwards;
+}

@@ -18,6 +18,25 @@ h5 {
   font-family: "Special Elite", cursive;
 }
 
+/* #h1__me::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  background-color: transparent;
+  height: 2.5rem;
+  margin-left: 2px;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: white;
+  }
+} */
+
 #me {
   background-color: rgba(33, 33, 33, 0.5);
   padding: 30px;
